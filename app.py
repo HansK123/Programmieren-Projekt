@@ -26,6 +26,7 @@ beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 print('Saving output to beat_times.csv')
 librosa.output.times_csv('beat_times.csv', beat_times)
 
-y_slow = librosa.effects.time_stretch(y, 2)
-y_pitched = librosa.effects.pitch_shift(y_slow, sr, n_steps=-6)
+y_speed = librosa.effects.time_stretch(y, 0.9)
+y_pitched = librosa.effects.pitch_shift(y_speed, sr, n_steps=0)
 sd.play(y_pitched,sr,blocking=True)
+beat_frames lösen licht aus
