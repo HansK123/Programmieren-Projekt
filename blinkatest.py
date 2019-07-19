@@ -7,6 +7,7 @@ pixels[Ansgar]=((255,255,0))
 time.sleep(5)
 pixels.fill((0,0,0))
 Ansgar=Ansgar+1
+pixels[Ansgar]=((255,0,0))
 time.sleep(5)
 
 pixels.fill((0,0,0))
