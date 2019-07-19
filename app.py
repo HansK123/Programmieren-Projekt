@@ -13,7 +13,7 @@ audio_path = librosa.util.example_audio_file()
 
 y, sr = librosa.load("Beispiel2.wav")
 
-
+print("HALLO")
 
 # 3. Run the default beat tracker
 tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
