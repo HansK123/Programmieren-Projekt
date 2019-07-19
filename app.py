@@ -33,4 +33,4 @@ y_speed = librosa.effects.time_stretch(y, 3)
 y_pitched = librosa.effects.pitch_shift(y_speed, sr, n_steps=0)
 sd.play(y_pitched,sr,blocking=True)
 
-pixels[y_speed]=((255, 0, 0))
+pixels[rate]=((255, 0, 0))
