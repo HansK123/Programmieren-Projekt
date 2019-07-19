@@ -9,6 +9,14 @@ import numpy as np
 import matplotlib.style as ms
 ms.use('seaborn-muted')
 
+pixel_pin = board.NEOPIXEL
+
+pixel_pin = board.D18
+
+num_pixels = 12
+pixels.fill((0, 255, 0))
+
+
 audio_path = librosa.util.example_audio_file()
 
 y, sr = librosa.load("Beispiel2.wav")
@@ -36,3 +44,4 @@ pixel_pin = board.D18
 
 num_pixels = 12
 pixels.fill((0, 255, 0))
+pixels.show()
