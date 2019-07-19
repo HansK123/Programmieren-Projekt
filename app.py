@@ -4,7 +4,7 @@ import sounddevice as sd
 import librosa
 import librosa.display
 import numpy as np
-
+include Adafruit_NeoPixel.h
 
 import matplotlib.style as ms
 ms.use('seaborn-muted')
