@@ -29,8 +29,8 @@ beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 print('Saving output to beat_times.csv')
 librosa.output.times_csv('beat_times.csv', beat_times)
 
-y_speed = librosa.effects.time_stretch(y, 0.9)
+y_speed = librosa.effects.time_stretch(y, 3)
 y_pitched = librosa.effects.pitch_shift(y_speed, sr, n_steps=0)
 sd.play(y_pitched,sr,blocking=True)
 
-pixels[tempo]=((255, 0, 0))
+pixels[y_speed]=((255, 0, 0))
