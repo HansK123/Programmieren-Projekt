@@ -44,6 +44,6 @@ LED_INVERT     = False   # True to invert the signal (when using NPN transistor 
 # Main program logic follows:
 if __name__ == '__main__':
         # Create NeoPixel object with appropriate configuration.
-        strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
+        strip = Adafruit_NeoPixel(12, 18, 10, 0, 0, 10, 1)
         # Intialize the library (must be called once before other functions).
         strip.begin()
