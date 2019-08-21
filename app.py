@@ -41,3 +41,4 @@ Ansgar=Ansgar+1
 time.sleep(5)
 
 pixels.fill((0,0,0))
+
