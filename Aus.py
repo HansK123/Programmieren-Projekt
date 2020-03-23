@@ -3,5 +3,5 @@ import neopixel
 
 pixels = neopixel.NeoPixel(board.D18, 12)
 
-pixels[0] = (100, 100, 100)
+pixels.fill((0,0,0))
 
