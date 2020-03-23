@@ -31,7 +31,7 @@ y_pitched = librosa.effects.pitch_shift(y_speed, sr, n_steps=0)
 sd.play(y_pitched,sr,blocking=True)
 
 
-pixels[b]=((255,255,0))
+pixels[b]=((245,255,0))
 time.sleep(5)
 pixels.fill((0,0,0))
 b=b+1
