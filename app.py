@@ -1,15 +1,12 @@
 import board
 import neopixel
-pixels = neopixel.NeoPixel(board.D18, 30)
+pixels = neopixel.NeoPixel(board.D18, 12)
 
 import sounddevice as sd
 import librosa
 import librosa.display
 import numpy as np
 
-
-#import matplotlib.style as ms
-#ms.use('seaborn-muted')
 
 
 audio_path = librosa.util.example_audio_file()
