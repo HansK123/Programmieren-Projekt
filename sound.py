@@ -9,7 +9,7 @@ filename = librosa.util.example_audio_file()
 # 2. Load the audio as a waveform `y`
 #    Store the sampling rate as `sr`
 y, sr = librosa.load(filename)
-
+sr = 22050
 # 3. Run the default beat tracker
 tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
 
