@@ -1,6 +1,7 @@
 # Beat tracking example
 from __future__ import print_function
 import librosa
+import sounddevice as sd
 
 # 1. Get the file path to the included audio example
 filename = "Beispiel2.wav"
