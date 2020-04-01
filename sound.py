@@ -1,5 +1,5 @@
 # Beat tracking example
-from playsound import playsound
+import playsound
 import librosa
 import sounddevice as sd
 
