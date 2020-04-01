@@ -3,7 +3,7 @@ from __future__ import print_function
 import librosa
 
 # 1. Get the file path to the included audio example
-filename = Beispiel2.wav
+filename = "Beispiel2.wav"
 
 # 2. Load the audio as a waveform `y`
 #    Store the sampling rate as `sr`
