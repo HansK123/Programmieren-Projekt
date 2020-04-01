@@ -4,7 +4,7 @@ import librosa
 import sounddevice as sd
 
 # 1. Get the file path to the included audio example
-filename = "Beispiel2.wav"
+filename = librosa.util.example_audio_file()
 
 # 2. Load the audio as a waveform `y`
 #    Store the sampling rate as `sr`
