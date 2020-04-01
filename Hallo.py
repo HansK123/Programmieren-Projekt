@@ -1,13 +1,13 @@
 import board
 import neopixel
-pixels = neopixel.NeoPixel(board.D18, 12)
+
 
 import sounddevice as sd
 import librosa
 import librosa.display
 import numpy as np
 
-
+#pixels = neopixel.NeoPixel(board.D18, 12)
 
 audio_path = librosa.util.example_audio_file()
 
@@ -29,9 +29,9 @@ y, sr = librosa.load("Beispiel2.wav")
 sd.play(y,sr,blocking=True)
 
 
-pixels[0]=((245,255,0))
-time.sleep(5)
-pixels.fill((0,0,0))
+#pixels[0]=((245,255,0))
+#time.sleep(5)
+#pixels.fill((0,0,0))
 
 
 
