@@ -1,6 +1,5 @@
 # Beat tracking example
 from playsound import playsound
-from __future__ import print_function
 import librosa
 import sounddevice as sd
 
