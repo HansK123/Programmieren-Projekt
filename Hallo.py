@@ -25,17 +25,13 @@ y, sr = librosa.load("Beispiel2.wav")
 
 #print('Saving output to beat_times.csv')
 #librosa.output.times_csv('beat_times.csv', beat_times)
-b=1
-y_speed = librosa.effects.time_stretch(y, b)
-y_pitched = librosa.effects.pitch_shift(y_speed, sr, n_steps=0)
-sd.play(y_pitched,sr,blocking=True)
+
+sd.play(y,sr,blocking=True)
 
 
-pixels[b]=((245,255,0))
+pixels[0]=((245,255,0))
 time.sleep(5)
 pixels.fill((0,0,0))
-b=b+1
-time.sleep(5)
 
-pixels.fill((0,0,0))
+
 
