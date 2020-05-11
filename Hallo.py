@@ -22,17 +22,16 @@ print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 
 # 4. Convert the frame indices of beat events into timestamps
 #beat_times = librosa.frames_to_time(beat_frames, sr=sr)
-#xyz = (60/12)
-#xy = xyz/150
+xyz = (60/12/150)
 #print('Saving output to beat_times.csv')
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
 
-#for i in range(12):
-#    pixels[i] = 50  #Farbe
- #   time.sleep(xy)     #Drehgeschwindigkeit
-  #  pixels.show()
-#time.sleep(0.5)
+    for i in range(12):
+        pixels[i] = 50  #Farbe
+        time.sleep(xyz)     #Drehgeschwindigkeit
+        pixels.show()
+    time.sleep(0.5)
 
 sd.play(y,sr,blocking=True)
 
