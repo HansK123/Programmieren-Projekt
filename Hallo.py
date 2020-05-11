@@ -11,7 +11,7 @@ import numpy as np
 
 audio_path = librosa.util.example_audio_file()
 
-y, sr = librosa.load("Demo.wav",sr=NONE)
+y, sr = librosa.load("Demo.wav",sr=None)
 
 
 
