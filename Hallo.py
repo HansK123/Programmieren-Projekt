@@ -27,11 +27,11 @@ xyz = (60/12/150)
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
 
-    for i in range(12):
+for i in range(12):
         pixels[i] = 50  #Farbe
         time.sleep(xyz)     #Drehgeschwindigkeit
         pixels.show()
-    time.sleep(0.5)
+time.sleep(0.5)
 
 sd.play(y,sr,blocking=True)
 
