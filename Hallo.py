@@ -1,4 +1,5 @@
 import board
+import time
 import neopixel
 
 
@@ -11,7 +12,7 @@ pixels = neopixel.NeoPixel(board.D18, 12)
 
 audio_path = librosa.util.example_audio_file()
 
-y, sr = librosa.load("Demo.wav",sr=None)
+y, sr = librosa.load("Demo.wav",sr=None)    #sr = none damit die sample rate des Songs übernommen wird
 
 
 
