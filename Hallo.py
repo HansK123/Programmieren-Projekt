@@ -7,7 +7,7 @@ import librosa
 import librosa.display
 import numpy as np
 
-#pixels = neopixel.NeoPixel(board.D18, 12)
+pixels = neopixel.NeoPixel(board.D18, 12)
 
 audio_path = librosa.util.example_audio_file()
 
