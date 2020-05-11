@@ -8,7 +8,7 @@ import librosa
 import librosa.display
 import numpy as np
 
-pixels = neopixel.NeoPixel(board.D18, 12, brightness=0.3, auto_write=True)
+pixels = neopixel.NeoPixel(board.D18, 12, brightness=0.1, auto_write=True)
 
 audio_path = librosa.util.example_audio_file()
 
@@ -27,8 +27,8 @@ beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
 for i in range(12):
-    pixels[i] = 50
-    time.sleep(0.5)
+    pixels[i] = 50  #Farbe
+    time.sleep(60/(12*beat_times))     #Drehgeschwindigkeit
     pixels.show()
 time.sleep(0.5)
 
