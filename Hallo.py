@@ -11,7 +11,7 @@ import numpy as np
 
 audio_path = librosa.util.example_audio_file()
 
-y, sr = librosa.load("Demo.wav")
+y, sr = librosa.load("Demo.wav",sr=NONE)
 
 
 
@@ -26,7 +26,7 @@ y, sr = librosa.load("Demo.wav")
 #print('Saving output to beat_times.csv')
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
-sd.play(y,sr*2,blocking=True)
+sd.play(y,sr,blocking=True)
 print(sr)
 
 #pixels[0]=((245,255,0))
