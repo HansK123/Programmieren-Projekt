@@ -29,9 +29,9 @@ librosa.output.times_csv('beat_times.csv', beat_times)
 sd.play(y,sr,blocking=True)
 print(sr)
 
-#pixels[0]=((245,255,0))
-#time.sleep(5)
-#pixels.fill((0,0,0))
+pixels[0]=((245,255,0))
+time.sleep(5)
+pixels.fill((0,0,0))
 
 
 
