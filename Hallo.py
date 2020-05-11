@@ -27,8 +27,8 @@ beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
 for i in range(12):
-    pixels[i] = 123
-    time.sleep(5)
+    pixels[i] = 50
+    time.sleep(0.5)
     pixels.show()
 time.sleep(0.5)
 
