@@ -26,7 +26,7 @@ y, sr = librosa.load("Demo.wav")
 #print('Saving output to beat_times.csv')
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
-sd.play(y,44800,blocking=True)
+sd.play(y,48000,blocking=True)
 print(sr)
 
 #pixels[0]=((245,255,0))
