@@ -15,7 +15,6 @@ y, sr = librosa.load("Demo.wav",sr=None)
 
 
 
-# 3. Run the default beat tracker
 tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
 
 print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
@@ -23,15 +22,19 @@ print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 # 4. Convert the frame indices of beat events into timestamps
 beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 
-print('Saving output to beat_times.csv')
-librosa.output.times_csv('beat_times.csv', beat_times)
+#print('Saving output to beat_times.csv')
+#librosa.output.times_csv('beat_times.csv', beat_times)
+
+def color_chase(color, wait):
+    for i in range(12):
+        pixels[i] = color
+        time.sleep(wait)
+        pixels.show()
+    time.sleep(0.5)
 
 sd.play(y,sr,blocking=True)
-print(sr)
 
-pixels[0]=((245,255,0))
-time.sleep(5)
-pixels.fill((0,0,0))
+
 
 
 
