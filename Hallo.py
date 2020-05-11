@@ -25,12 +25,11 @@ beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 #print('Saving output to beat_times.csv')
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
-def color_chase(color, wait):
-    for i in range(12):
-        pixels[i] = color
-        time.sleep(wait)
-        pixels.show()
-    time.sleep(0.5)
+for i in range(12):
+    pixels[i] = 123
+    time.sleep(5)
+    pixels.show()
+time.sleep(0.5)
 
 sd.play(y,sr,blocking=True)
 
