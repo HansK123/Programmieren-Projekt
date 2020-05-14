@@ -45,9 +45,9 @@ def Musik():
         sd.play(y, sr, blocking=True)
 
 
-
-Licht()
 Musik()
+Licht()
+
 
 
 
