@@ -31,8 +31,7 @@ for i in range(12):
         pixels[i] = 50  #Farbe
         time.sleep(xyz)     #Drehgeschwindigkeit
         pixels.show()
-
-sd.play(y,sr,blocking=True)
+        sd.play(y,sr,blocking=True)
 
 
 
