@@ -8,21 +8,6 @@ import librosa
 import librosa.display
 import numpy as np
 
-def Ringlicht()
-        for i in range(11):
-                pixels[i] = (100,100,100)
-                pixels.show()
-                time.sleep(60/12/150)     #Drehgeschwindigkeit
-                pixels[i] = (0,0,0)
-        return
-
-
-
-
-
-
-
-
 pixels = neopixel.NeoPixel(board.D18, 12, brightness=0.1, auto_write=True)
 
 audio_path = librosa.util.example_audio_file()
@@ -39,10 +24,17 @@ print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 #beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 #print('Saving output to beat_times.csv')
 #librosa.output.times_csv('beat_times.csv', beat_times)
+while sd.play(y,sr,blocking=True)
 
-Ringlicht()
+        for i in range(11):
+                pixels[i] = (100,100,100)
+                pixels.show()
+                time.sleep(60/12/150)     #Drehgeschwindigkeit
+                pixels[i] = (0,0,0)
 
-sd.play(y,sr,blocking=True)
+
+
+
 
 
 
