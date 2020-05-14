@@ -27,8 +27,8 @@ print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 
 
 
-while sd.play(y,sr,blocking=True):
 
+while True:
         for i in range(11):
                 pixels[i] = (100,100,100)
                 pixels.show()
@@ -38,7 +38,7 @@ while sd.play(y,sr,blocking=True):
                 pixels[i] = (0,0,0)
 
 
-
+while sd.play(y,sr,blocking=True)
 
 
 
