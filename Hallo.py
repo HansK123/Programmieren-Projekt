@@ -36,9 +36,9 @@ def Musik():
 #Licht()
 #Musik()
 
-if __name__ == '__main__':
-    Thread(target = Licht()).start()
-    Thread(target = Musik()).start()
+#if __name__ == '__main__':
+Thread(target = Licht()).start()
+Thread(target = Musik()).start()
 
 
 
