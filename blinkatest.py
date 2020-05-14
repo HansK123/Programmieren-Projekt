@@ -19,4 +19,4 @@ def theaterChaseRainbow(pixels, wait_ms=50):
                 pixels.setPixelColor(i+q, 0)
 
 
-theaterChaseRainbow(strip, Color(127, 127, 127))
+theaterChaseRainbow(pixels, Color(127, 127, 127))
