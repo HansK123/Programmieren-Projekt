@@ -1,7 +1,7 @@
 import board
 import time
 import neopixel
-
+from threading import Thread
 
 import sounddevice as sd
 import librosa
@@ -33,10 +33,12 @@ def Musik():
 
 
 
-Licht()
-Musik()
+#Licht()
+#Musik()
 
-
+if __name__ == '__main__':
+    Thread(target = Licht()).start()
+    Thread(target = Musik()).start()
 
 
 
