@@ -31,7 +31,7 @@ for i in range(12):
         pixels[i] = 1000
         time.sleep(xyz)     #Drehgeschwindigkeit
         pixels.show()
-        pixels.fill(0,0,0)
+        pixels.fill(0,0,12)
 
 sd.play(y,sr,blocking=True)
 
