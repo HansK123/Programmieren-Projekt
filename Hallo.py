@@ -28,10 +28,12 @@ xyz = (60/12/150)
 
 
 for i in range(12):
-        pixels[i] = 50  #Farbe
+        pixels[i] = 1000
         time.sleep(xyz)     #Drehgeschwindigkeit
         pixels.show()
-        sd.play(y,sr,blocking=True)
+
+
+sd.play(y,sr,blocking=True)
 
 
 
