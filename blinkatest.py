@@ -20,3 +20,4 @@ def theaterChaseRainbow(pixels, wait_ms=50):
 
 
 theaterChaseRainbow(pixels, Color(127, 127, 127))
+
