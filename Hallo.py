@@ -25,8 +25,8 @@ print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 xyz = (60/12/150)
 #print('Saving output to beat_times.csv')
 #librosa.output.times_csv('beat_times.csv', beat_times)
-pixels[0] = (100,100,100)
-#pixels[12] = (100,100,100)
+#pixels[0] = (100,100,100)
+pixels[12] = (100,100,100)
 
 #for i in range(12):
  #       pixels[i] = (100,100,100)
