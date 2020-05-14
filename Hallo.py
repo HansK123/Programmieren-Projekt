@@ -28,7 +28,7 @@ xyz = (60/12/150)
 
 
 for i in range(12):
-        pixels[i] = 12000
+        pixels[i] = (100,100,100)
         time.sleep(xyz)     #Drehgeschwindigkeit
         pixels.show()
         pixels.fill(0,0,12)
