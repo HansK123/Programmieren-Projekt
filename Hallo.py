@@ -26,7 +26,6 @@ print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
 
-sd.play(y,sr,blocking=True)
 
 while sd.play(y,sr,blocking=True):
 
