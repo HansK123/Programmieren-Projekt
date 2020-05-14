@@ -27,7 +27,7 @@ xyz = (60/12/150)
 #librosa.output.times_csv('beat_times.csv', beat_times)
 
 
-for i in range(12):
+for i in range(11):
         pixels[i] = (100,100,100)
         time.sleep(xyz)     #Drehgeschwindigkeit
         pixels.show()
