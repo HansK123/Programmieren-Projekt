@@ -1,7 +1,20 @@
+from turtle import Turtle, Screen
+
+turtle_one = Turtle(shape="turtle")
+turtle_one.setheading(30)
+turtle_two = Turtle(shape="turtle")
+turtle_two.setheading(210)
+
+
+
+
+
+
+
+
 import board
 import time
 import neopixel
-from threading import Thread
 
 import sounddevice as sd
 import librosa
@@ -33,13 +46,10 @@ def Musik():
 
 
 
-#Licht()
-#Musik()
+Licht()
+Musik()
 
-#if __name__ == '__main__':
 
-Thread(target = Musik()).start()
-Thread(target = Licht()).start()
 
 
 
