@@ -32,7 +32,9 @@ while sd.play(y,sr,blocking=True):
         for i in range(11):
                 pixels[i] = (100,100,100)
                 pixels.show()
-                time.sleep(60/12/150)     #Drehgeschwindigkeit
+                time.sleep(60/12/150) #Drehgeschwindigkeit
+
+
                 pixels[i] = (0,0,0)
 
 
