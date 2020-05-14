@@ -31,9 +31,9 @@ for i in range(12):
         pixels[i] = (100,100,100)
         time.sleep(xyz)     #Drehgeschwindigkeit
         pixels.show()
-        pixels.fill(0,0,12)
-
+        pixels[i](0,0,0)
 sd.play(y,sr,blocking=True)
+
 
 
 
