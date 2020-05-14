@@ -37,9 +37,9 @@ def Musik():
 #Musik()
 
 #if __name__ == '__main__':
-Thread(target = Licht()).start()
-Thread(target = Musik()).start()
 
+Thread(target = Musik()).start()
+Thread(target = Licht()).start()
 
 
 
