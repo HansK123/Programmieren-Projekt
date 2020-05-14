@@ -38,7 +38,7 @@ while True:
                 pixels[i] = (0,0,0)
 
 
-while sd.play(y,sr,blocking=True)
+sd.play(y,sr,blocking=True)
 
 
 
