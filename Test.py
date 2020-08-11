@@ -1,4 +1,5 @@
 from multiprocessing import Process
+from threading import Thread
 import board
 import time
 import neopixel
@@ -28,7 +29,7 @@ def Musik():                                    # Funktion zum Abspielen des Son
         sd.play(y, sr, blocking=True)
 
 if __name__ == '__main__':
-    Process(target=Musik).start()
-    Process(target=Licht).start()
+    Thread(target = Musik).start()
+    Thread(target = Licht).start()
 
 
