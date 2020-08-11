@@ -28,7 +28,7 @@ def Musik():                                    # Funktion zum Abspielen des Son
         sd.play(y, sr, blocking=True)
 
 if __name__ == '__main__':
-    Process(target=Licht).start()
     Process(target=Musik).start()
+    Process(target=Licht).start()
 
 
