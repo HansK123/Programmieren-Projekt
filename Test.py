@@ -29,6 +29,6 @@ def Musik():                                    # Funktion zum Abspielen des Son
 
 if __name__ == '__main__':
     Process(target=Musik).start()
-    Process(target=Licht).start()
+   # Process(target=Licht).start()
 
 
