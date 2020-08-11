@@ -1,52 +1,36 @@
-from turtle import Turtle, Screen
-
-turtle_one = Turtle(shape="turtle")
-turtle_one.setheading(30)
-turtle_two = Turtle(shape="turtle")
-turtle_two.setheading(210)
-
-
-
-
-
-
-
-
 import board
 import time
 import neopixel
-
 import sounddevice as sd
 import librosa
 import librosa.display
 import numpy as np
 
-y, sr = librosa.load("Demo.wav",sr=None)    #sr = none damit die sample rate des Songs übernommen wird
+y, sr = librosa.load("Demo.wav",sr=None)    # sr = none damit die sample rate des Songs übernommen wird
 
-pixels = neopixel.NeoPixel(board.D18, 12, brightness=0.1, auto_write=True)
+pixels = neopixel.NeoPixel(board.D18, 12, brightness=0.1, auto_write=True) # D18 ist der Pin des Raspberry, 12 die Anzahl der LED´s
 
-audio_path = librosa.util.example_audio_file()
-
-tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)        # Librosa funktion zum feststellen des Tempos
 
 print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 
-
-def Licht():
-        while True:
-                for i in range(11):
+def Licht():                                                   #Funktion für das LED Ringlicht zur visualisierung der BPM
+        while True:                                             #While True damit das Ringlucht nicht nach einer Umdrehung stoppt. Noch keine                                                      #
+                for i in range(11):                             #bessere Lösung gefunden
                         pixels[i] = (100, 100, 100)
                         pixels.show()
-                        time.sleep(60 / 12 / 150)  # Drehgeschwindigkeit
+                        time.sleep(60 / 12 / 150)  # Drehgeschwindigkeit Proberechnung um die BPM (in diesem Fall 150) über das Ringlicht darzustellen
                         pixels[i] = (0, 0, 0)
 
 
-def Musik():
+def Musik():                                    # Funktion zum Abspielen des Songs
         sd.play(y, sr, blocking=True)
 
 
 Musik()
 Licht()
+
+
 
 
 
