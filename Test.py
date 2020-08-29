@@ -1,4 +1,3 @@
-from multiprocessing import Process
 from threading import Thread
 import board
 import time
@@ -8,7 +7,7 @@ import librosa
 import librosa.display
 import numpy as np
 
-y, sr = librosa.load("Demo3.mp3",sr=None)    # sr = none damit die sample rate des Songs übernommen wird
+y, sr = librosa.load("Beispiel2.wav",sr=None)    # sr = none damit die sample rate des Songs übernommen wird
 
 pixels = neopixel.NeoPixel(board.D18, 12, brightness=0.1, auto_write=True) # D18 ist der Pin des Raspberry, 12 die Anzahl der LED´s
 
@@ -28,7 +27,7 @@ def Licht():                                                   #Funktion für da
 def Musik():                                    # Funktion zum Abspielen des Songs
         sd.play(y, sr, blocking=True)
 
-if __name__ == '__main__':
+if __name__ == '__main__':                      #Threading um beide Prozesse gleichzeitig laufen zu lassen
     Thread(target = Musik).start()
     Thread(target = Licht).start()
 
