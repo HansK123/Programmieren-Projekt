@@ -15,7 +15,7 @@ tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)        # Librosa funkti
 
 #print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 
-def Ringlicht():                                                   #Funktion für das LED Ringlicht zur visualisierung der BPM
+def ringlicht():                                                   #Funktion für das LED Ringlicht zur visualisierung der BPM
         while True:                                             #While True damit das Ringlucht nicht nach einer Umdrehung stoppt. Noch keine                                                      #
                 for i in range(11):                             #bessere Lösung gefunden
                         pixels[i] = (100, 100, 100)
