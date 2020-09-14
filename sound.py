@@ -6,6 +6,7 @@ import sounddevice as sd
 import librosa
 import librosa.display
 import numpy as np
+from playsound import playsound
 
 y, sr = librosa.load("Beispiel2.wav",sr=None)    # sr = none damit die sample rate des Songs übernommen wird
 
@@ -17,7 +18,7 @@ tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)        # Librosa funkti
 
 def ringlicht():                                                   #Funktion für das LED Ringlicht zur visualisierung der BPM
         #while True:                                             #While True damit das Ringlucht nicht nach einer Umdrehung stoppt. Noch keine                                                      #
-                for i in range(99):                             #bessere Lösung gefunden
+                for i in range(11):                             #bessere Lösung gefunden
                         pixels[i] = (100, 100, 100)
                         pixels.show()
                         time.sleep(60 / 12 / 150)  # Drehgeschwindigkeit Proberechnung um die BPM (in diesem Fall 150) über das Ringlicht darzustellen
@@ -25,7 +26,8 @@ def ringlicht():                                                   #Funktion fü
 
 
 def musik_abspielen():                                    # Funktion zum Abspielen des Songs
-        sd.play(y, sr, blocking=True)
+       # sd.play(y, sr, blocking=True)
+       playsound(Demo3.mp3)
 
 
 
