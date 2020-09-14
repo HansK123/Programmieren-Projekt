@@ -26,8 +26,8 @@ def ringlicht():                                                   #Funktion fü
 
 
 def musik_abspielen():                                    # Funktion zum Abspielen des Songs
-       # sd.play(y, sr, blocking=True)
-       playsound(Demo3.mp3)
+       sd.play(y, sr, blocking=True)
+       status = sd.wait()
 
 
 
