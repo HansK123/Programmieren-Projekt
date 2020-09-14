@@ -6,7 +6,6 @@ import sounddevice as sd
 import librosa
 import librosa.display
 import numpy as np
-import playsound
 
 y, sr = librosa.load("Beispiel2.wav",sr=None)    # sr = none damit die sample rate des Songs übernommen wird
 
