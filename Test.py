@@ -32,3 +32,5 @@ if __name__ == '__main__':                      #Threading um beide Prozesse gle
     Thread(target = Licht).start()
 
 
+
+
