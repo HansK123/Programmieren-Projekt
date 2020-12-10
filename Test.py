@@ -25,7 +25,7 @@ def Licht():                                                   #Funktion für da
 
 
 def Musik():                                    # Funktion zum Abspielen des Songs
-        sd.play(y, sr, blocking=True)
+        sd.play(y, sr, blocking=False)
 
 if __name__ == '__main__':                      #Threading um beide Prozesse gleichzeitig laufen zu lassen
     Thread(target = Musik).start()
