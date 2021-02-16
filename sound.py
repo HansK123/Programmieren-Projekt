@@ -1,43 +1,27 @@
+"""PyAudio Example: Play a wave file (callback version)"""
+import pyaudio
+import wave
 import time
-import multiprocessing
-import board
-import neopixel
-import sounddevice as sd
-import librosa
-import librosa.display
-import numpy as np
+import sys
 
-y, sr = librosa.load("Beispiel2.wav",sr=None)    # sr = none damit die sample rate des Songs übernommen wird
+#if len(sys.argv) < 2:                                                          #Auskommentiert um kein Argument zu benötigen
+#    print("Plays a wave file.\n\nUsage: %s filename.wav" % sys.argv[0])
+#    sys.exit(-1)
 
-pixels = neopixel.NeoPixel(board.D18, 12, brightness=0.1, auto_write=True) # D18 ist der Pin des Raspberry, 12 die Anzahl der LED´s
-
-tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)        # Librosa funktion zum feststellen des Tempos
-
-#print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
-
-def ringlicht():                                                   #Funktion für das LED Ringlicht zur visualisierung der BPM
-        #while True:                                             #While True damit das Ringlucht nicht nach einer Umdrehung stoppt. Noch keine                                                      #
-                for i in range(11):                             #bessere Lösung gefunden
-                        pixels[i] = (100, 100, 100)
-                        pixels.show()
-                        time.sleep(60 / 12 / 150)  # Drehgeschwindigkeit Proberechnung um die BPM (in diesem Fall 150) über das Ringlicht darzustellen
-                        pixels[i] = (0, 0, 0)
-
-
-def musik_abspielen():                                    # Funktion zum Abspielen des Songs
-       sd.play(y, sr, blocking=True)
-       status = sd.wait()
-
-
-
-p1 = multiprocessing.Process(target=musik_abspielen,args=[])
-p2 = multiprocessing.Process(target=ringlicht,args=[])
-
-if __name__ == '__main__':
-    p1.start()
-    p2.start()
-    p1.join()
-    p2.join()
-
-
-print("Fertig mit durchlauf nach")
+wf = wave.open("Demo.wav", 'rb')
+p = pyaudio.PyAudio()
+def callback(in_data, frame_count, time_info, status):
+    data = wf.readframes(frame_count)
+    return (data, pyaudio.paContinue)
+stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
+                channels=wf.getnchannels(),
+                rate=wf.getframerate(),
+                output=True,
+                stream_callback=callback)
+stream.start_stream()
+while stream.is_active():
+    time.sleep(0.1)
+stream.stop_stream()
+stream.close()
+wf.close()
+p.terminate()
