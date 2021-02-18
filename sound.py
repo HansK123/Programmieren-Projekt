@@ -10,6 +10,7 @@ import syshaw
 
 wf = wave.open("Demo.wav", 'rb')
 p = pyaudio.PyAudio()
+print ('\n'.join([y['name'] for y in [p.get_device_info_by_index(x) for x in range(p.get_device_count())]]))
 def callback(in_data, frame_count, time_info, status):
     data = wf.readframes(frame_count)
     return (data, pyaudio.paContinue)
