@@ -1,1 +1,1 @@
-print ('\n'.join([y['name'] for y in [p.get_device_info_by_index(x) for x in range(p.get_device_count())]]))
+print '\n'.join([y['name'] for y in [pa.get_device_info_by_index(x) for x in range(pa.get_device_count())]])
