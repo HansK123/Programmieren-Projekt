@@ -2,7 +2,7 @@
 import pyaudio
 import wave
 import time
-import sys
+import syshaw
 
 #if len(sys.argv) < 2:                                                          #Auskommentiert um kein Argument zu benötigen
 #    print("Plays a wave file.\n\nUsage: %s filename.wav" % sys.argv[0])
