@@ -24,6 +24,5 @@ while stream.is_active():
 stream.stop_stream()
 stream.close()
 wf.close()
-print ('\n'.join([y['name'] for y in [p.get_device_info_by_index(x) for x in range(p.get_device_count())]]))
 
 p.terminate()
