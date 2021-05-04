@@ -17,11 +17,11 @@ print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
 
 def Licht():                                                   # Funktion für das LED Ringlicht zur visualisierung der BPM
         while True:                                            # While True damit das Ringlucht nicht nach einer Umdrehung stoppt
-                for i in range(11):
+                for i in range(11):                # Ringdurchlauf des LED Rings
                         pixels[i] = (100, 100, 100)# Festlegung der LED Werte (in diesem Fall Weiß in mittlerer Intensität)
                         pixels.show()              # Befehl zum aktivieren der LEDs
                         time.sleep(60 / 12 / 150)  # Drehgeschwindigkeit Proberechnung um die BPM (in diesem Fall 150) darzustellen
-                        pixels[i] = (0, 0, 0)
+                        pixels[i] = (0, 0, 0)      # Ausschalten der LED
 
 
 def Musik():                                    # Funktion zum Abspielen des Songs
